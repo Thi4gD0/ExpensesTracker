@@ -1,0 +1,6 @@
+# Ambiente virtual (cada um cria o seu a partir do requirements.txt)
+.venv/
+
+# Cache de bytecode gerado automaticamente pelo Python
+__pycache__/
+*.pyc
