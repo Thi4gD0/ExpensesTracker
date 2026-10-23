@@ -1,6 +1,9 @@
 # Ambiente virtual (cada um cria o seu a partir do requirements.txt)
 .venv/
 
+# Dados nao versionados do usuario
+despesas.json
+
 # Cache de bytecode gerado automaticamente pelo Python
 __pycache__/
 *.pyc
