@@ -4,6 +4,9 @@
 # Dados nao versionados do usuario
 despesas.json
 
+# Experimentos locais (nao versionar)
+rascunhos/
+
 # Cache de bytecode gerado automaticamente pelo Python
 __pycache__/
 *.pyc
