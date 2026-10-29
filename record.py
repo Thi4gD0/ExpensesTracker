@@ -16,8 +16,29 @@ def le_dados():
         dados = json.load(arq)
         return dados
 
+# Funcao grava dados sobrescreve conteudo pelo dicionario recebido
+
+
+def grava_dados(dados):
+    with open(ARQUIVO_DADOS, "w", encoding="utf-8") as arq:
+        json.dump(dados, arq, indent=4, ensure_ascii= False)
+
 # Bloco Principal
 
 
 if __name__ == "__main__":
-    print(le_dados())
+    info = le_dados()
+
+    nova_despesa = { 
+        "id": info["proximo_id"], 
+        "descricao": "Conta de Luz", 
+        "valor": 1000, 
+        "data": "2026-08-10", 
+        "categoria": "Servicos",
+        }
+
+    info["despesas"].append(nova_despesa)
+    info["proximo_id"] += 1
+
+    grava_dados(info)
+    print(info)
